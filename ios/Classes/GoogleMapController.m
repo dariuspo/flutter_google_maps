@@ -542,7 +542,7 @@ static double ToDouble(NSNumber *data) { return [FLTGoogleMapJsonConversions toD
   [_channel invokeMethod:@"map#onLongPress" arguments:@{@"position" : LocationToJson(coordinate)}];
 }
 
-- (void)mapView:(GMSMapView*)mapView didTapPOIWithPlaceID:(NSString *)placeID name:(NSString *)name location:(CLLocationCoordinate2D)location {
+- (void)mapView:(GMSMapView*)mapView didTapPOIWithPlaceID:(NSString *)placeID name:(NSString *)name location:(CLLocationCoordinate2D)coordinate {
   [_channel invokeMethod:@"map#onPoiClick" arguments:@{@"position" : LocationToJson(coordinate), @"name" : name, @"placeId" : placeID, }];
 }
 
